@@ -2,28 +2,18 @@
 int main()
 {
     int n;
-    int sum = 0;
     scanf("%d",&n);
-    for (int i = 1;i <= n;i++)
+    int status = 0;
+    for (int i = 2;i < n/2+1;i++)
+        if (n%i == 0)
     {
-        int j = i;
-        if (i%7 == 0)
-        {
-            sum++;
-            continue;
-        }
-        while(j != 0)
-        {
-            int number = j%10;
-            if (number == 7)
-            {
-                sum++;
-                j = 0;
-            }
-            j /= 10;
-        }
+        status = 1;
+        break;
     }
-    printf("%d",sum);
+    if (status == 0)
+        printf("Y");
+    else
+        printf("N");
 
 	return 0;
 }
