@@ -60,7 +60,8 @@ int main()
 
 int main()
 {
-
+    char a = '4';
+    printf("%d",a-48);
 
     return  0;
 }
